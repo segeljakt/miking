@@ -18,7 +18,7 @@ cd stdlib; export MCORE_STDLIB=`pwd`; cd ..;
 # General function for building the project
 buildboot(){
     (cd src/boot;
-     dune build boot.exe && cp -f _build/default/boot.exe ../../build/boot)
+     opam exec -- dune build boot.exe && cp -f _build/default/boot.exe ../../build/boot)
 }
 
 case $1 in
